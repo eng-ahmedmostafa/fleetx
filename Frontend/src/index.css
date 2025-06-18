@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 100 0% 100%;
+    --foreground: 120 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 10% 10%;
+
+    --primary: 203 72% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 120 25% 95%;
+    --secondary-foreground: 120 10% 10%;
+
+    --muted: 120 5% 96%;
+    --muted-foreground: 120 5% 40%;
+
+    --accent: 203 60% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 203 40% 30%;
+    --input: 203 40% 30%;
+    --ring: 203 72% 30%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 203 72% 22%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 203 72% 22%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 60% 25%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 203 40% 30%;
+    --sidebar-ring: 203 72% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .fleetx-scrollbar {
+    @apply scrollbar-thin scrollbar-thumb-fleetx-main scrollbar-track-gray-100;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply relative bg-white rounded-lg shadow-md px-5 py-4 transition-all duration-300 hover:shadow-lg border border-gray-100;
+  }
+
+  .stat-value {
+    @apply text-2xl md:text-3xl font-semibold mt-2 mb-1;
+  }
+
+  .stat-label {
+    @apply text-sm md:text-base text-gray-500 font-medium;
+  }
+
+  .stat-icon {
+    @apply absolute top-4 right-4 text-fleetx-main opacity-20 w-10 h-10;
+  }
+}
